@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div id="div-1" class="show">
+            <div class="top-element">
+                <div class="level">Level 1</div>
+                <div class="Rs">Rs : 0</div>
+            </div>
+            <div><img class="logo" src="assets/[removal.ai]_68ef2e11-eedd-4681-b72c-2a9d9c7d76bc.png" alt="logo"></div>
+            <div class="question">
+                <h2>Which planet in the Milky Way is the hottest ?</h2>
+            </div>
+            <div class="answers">
+                <div class="ans-A-B">
+                    <div> <button class="option" id="venus" onclick="planet('venus')"> <span> a : Venus </span></button>
+                    </div>
+                    <div> <button class="option-red" id="sun" onclick="planet('sun')"> <span> b : Sun </span></button>
+                    </div>
+                </div>
+                <div class="ans-C-D">
+                    <div> <button class="option-red" id="jupiter" onclick="planet('jupiter')"> <span> c : Jupiter
+                            </span></button></div>
+                    <div> <button class="option-red" id="mars" onclick="planet('mars')"> <span> d : Mars
+                            </span></button></div>
+                </div>
+            </div>
+
+        </div>
+        <div id="gameOverImg" class="hidden"><img class="game-over" src="assets/pngimg.com - game_over_PNG33.png"
+                alt="">
+            <div class="lvl-1-fail">
+                <div>
+                    <h2 class="lvl-1-rs">Rs : 0</h2>
+                </div>
+                <div>
+                    <h4>Question 0/5</h4>
+                </div>
+                <div> <button class="tryAgain" onclick="location.reload()">Try Again</button></div>
+            </div>
+        </div>
+
+        <div id="gameOverImg-1" class="hidden"><img class="game-over" src="assets/pngimg.com - game_over_PNG33.png"
+                alt="">
+            <div class="lvl-1-fail">
+                <div>
+                    <h2 class="lvl-1-rs">Rs : 1000</h2>
+                </div>
+                <div>
+                    <h4>Question 1/5</h4>
+                </div>
+                <div> <button class="tryAgain" onclick="location.reload()">Try Again</button></div>
+            </div>
+        </div>
+        <div id="gameOverImg-2" class="hidden"><img class="game-over" src="assets/pngimg.com - game_over_PNG33.png"
+                alt="">
+            <div class="lvl-1-fail">
+                <div>
+                    <h2 class="lvl-1-rs">Rs : 2000</h2>
+                </div>
+                <div>
+                    <h4>Question 2/5</h4>
+                </div>
+                <div> <button class="tryAgain" onclick="location.reload()">Try Again</button></div>
+            </div>
+        </div>
+        <div id="gameOverImg-3" class="hidden"><img class="game-over" src="assets/pngimg.com - game_over_PNG33.png"
+                alt="">
+            <div class="lvl-1-fail">
+                <div>
+                    <h2 class="lvl-1-rs">Rs : 3000</h2>
+                </div>
+                <div>
+                    <h4>Question 3/5</h4>
+                </div>
+                <div> <button class="tryAgain" onclick="location.reload()">Try Again</button></div>
+            </div>
+        </div>
+        <div id="gameOverImg-4" class="hidden"><img class="game-over" src="assets/pngimg.com - game_over_PNG33.png"
+                alt="">
+            <div class="lvl-1-fail">
+                <div>
+                    <h2 class="lvl-1-rs">Rs : 4000</h2>
+                </div>
+                <div>
+                    <h4>Question 4/5</h4>
+                </div>
+                <div> <button class="tryAgain" onclick="location.reload()">Try Again</button></div>
+            </div>
+        </div>
+
+        <div id="div-2" class="hidden">
+            <div class="top-element">
+                <div class="level">Level 2</div>
+                <div class="Rs">Rs : 1000</div>
+            </div>
+            <div><img class="logo" src="assets/[removal.ai]_68ef2e11-eedd-4681-b72c-2a9d9c7d76bc.png" alt="logo"></div>
+            <div class="question">
+                <h2>What phone company produced the 3310 ?</h2>
+            </div>
+            <div class="answers">
+                <div class="ans-A-B">
+                    <div> <button class="option-red" id="apple" onclick="company('apple')"> <span> a : Apple
+                            </span></button></div>
+                    <div> <button class="option-red" id="samsung" onclick="company('samsung')"> <span> b : Samsung
+                            </span></button></div>
+                </div>
+                <div class="ans-C-D">
+                    <div> <button class="option" id="nokia" onclick="company('nokia')"> <span> c : Nokia
+                            </span></button></div>
+                    <div> <button class="option-red" id="oppo" onclick="company('oppo')"> <span> d : Oppo
+                            </span></button></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="div-3" class="hidden">
+            <div class="top-element">
+                <div class="level">Level 3</div>
+                <div class="Rs">Rs : 2000</div>
+            </div>
+            <div><img class="logo" src="assets/[removal.ai]_68ef2e11-eedd-4681-b72c-2a9d9c7d76bc.png" alt="logo"></div>>
+            <div class="question">
+                <h2>How many days does it take for the Earth to orbit the Sun ?</h2>
+            </div>
+            <div class="answers">
+                <div class="ans-A-B">
+                    <div> <button class="option-red" id="day-377" onclick="days('377')"> <span> a : 377 </span></button>
+                    </div>
+                    <div> <button class="option" id="day-365" onclick="days('365')"> <span> b : 365 </span></button>
+                    </div>
+                </div>
+                <div class="ans-C-D">
+                    <div> <button class="option-red" id="day-345" onclick="days('345')"> <span> c : 345 </span></button>
+                    </div>
+                    <div> <button class="option-red" id="day-634" onclick="days('634')"> <span> d : 634 </span></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="div-4" class="hidden">
+            <div class="top-element">
+                <div class="level">Level 4</div>
+                <div class="Rs">Rs : 3000</div>
+            </div>
+            <div><img class="logo" src="assets/[removal.ai]_68ef2e11-eedd-4681-b72c-2a9d9c7d76bc.png" alt="logo"></div>
+            <div class="question">
+                <h2>Which city was the capital of Pakistan before Islamabad ?</h2>
+            </div>
+            <div class="answers">
+                <div class="ans-A-B">
+                    <div> <button class="option-red" id="lahore" onclick="city('lahore')"><span> a : Lahore
+                            </span></button></div>
+                    <div> <button class="option-red" id="gilgit" onclick="city('gilgit')"> <span> b : Gilgit
+                            </span></button></div>
+                </div>
+                <div class="ans-C-D">
+                    <div> <button class="option-red" id="quetta" onclick="city('quetta')"><span> c : Quetta
+                            </span></button></div>
+                    <div> <button class="option" id="karachi" onclick="city('karachi')"> <span> d : Karachi
+                            </span></button></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="div-5" class="hidden">
+            <div class="top-element">
+                <div class="level">Level 5</div>
+                <div class="Rs">Rs : 4000</div>
+            </div>
+            <div><img class="logo" src="assets/[removal.ai]_68ef2e11-eedd-4681-b72c-2a9d9c7d76bc.png" alt="logo"></div>
+            <div class="question">
+                <h2>What is the National animal of Pakistan ?</h2>
+            </div>
+            <div class="answers">
+                <div class="ans-A-B">
+                    <div> <button class="option-red" id="indusRiverDolphin" onclick="animal('indusRiverDolphin')"> <span> a
+                                : Indus River Dolphin </span></button></div>
+                    <div> <button class="option-red" id="snowLeopard" onclick="animal('snowLeopard')"><span> b : Snow
+                                Leopard </span></button></div>
+                </div>
+                <div class="ans-C-D">
+                    <div> <button class="option" id="markhor" onclick="animal('markhor')"> <span> c : Markhor
+                            </span></button></div>
+                    <div> <button class="option-red" id="tiger" onclick="animal('tiger')"> <span> d : Tiger
+                            </span></button></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="div-6" class="hidden">
+            <div class="winner-div">
+                <div class="trophyDiv"><img class="trophyImg" src="assets/win-trophy-gif-3.gif" alt=""></div>
+                <div>
+                    <h2>Congrats!</h2>
+                </div>
+                <div>
+                    <h3> Quiz completed successfully. </h3>
+                </div>
+                <div>
+                    <p>You Won Rs 5000</p>
+                </div>
+                <div>
+                    <h3>Question 5/5</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
